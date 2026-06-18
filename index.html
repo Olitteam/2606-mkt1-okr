@@ -4,510 +4,280 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>6월 마케팅 목표 (빌딩기)</title>
-<link rel="preconnect" href="https://cdn.jsdelivr.net">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
 <style>
   :root{
-    --ink:#1a1a1a;
-    --ink-2:#555;
-    --ink-3:#8a8a86;
-    --line:#e7e5df;
-    --line-2:#d8d6cf;
-    --paper:#ffffff;
-    --bg:#f6f5f1;
-    --accent:#1d6e56;
-    --accent-soft:#e7f2ec;
-    --warn:#a45a1d;
-    --warn-soft:#f7ede1;
-    --danger:#9a3434;
-    --danger-soft:#f6e7e6;
-    --blue:#1b5fa5;
-    --blue-soft:#e7f0f9;
+    --ink:#16181d; --ink-soft:#3a3f4a; --mute:#6b7280; --faint:#9aa1ad;
+    --line:#e5e7eb; --line-soft:#eef0f3; --bg:#fbfbf9; --card:#ffffff;
+    --accent:#1f6feb; --accent-soft:#eaf2ff;
+    --new:#0f7b54; --new-soft:#e7f6ee; --new-line:#bfe6d3;
+    --warn:#b4690e; --warn-soft:#fdf3e3;
+    --radius:14px;
+    --maxw:880px;
   }
-  *{box-sizing:border-box;margin:0;padding:0}
+  *{box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;}
   body{
-    font-family:'Pretendard',-apple-system,sans-serif;
-    background:var(--bg);
-    color:var(--ink);
-    line-height:1.6;
-    -webkit-font-smoothing:antialiased;
-    padding:48px 20px;
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:"Noto Sans KR","Inter",system-ui,-apple-system,sans-serif;
+    line-height:1.62; letter-spacing:-.01em;
+    padding:0 18px 90px;
   }
-  .sheet{
-    max-width:920px;
-    margin:0 auto;
-    background:var(--paper);
-    border:1px solid var(--line);
-    border-radius:14px;
-    overflow:hidden;
-  }
-  /* Header */
-  header{
-    padding:38px 44px 30px;
-    border-bottom:1px solid var(--line);
-  }
+  .wrap{max-width:var(--maxw); margin:0 auto;}
+  header.top{padding:46px 0 14px; border-bottom:1px solid var(--line);}
   .eyebrow{
-    font-size:12px;
-    font-weight:600;
-    letter-spacing:.12em;
-    color:var(--accent);
-    text-transform:uppercase;
-    margin-bottom:12px;
-  }
-  header h1{
-    font-size:27px;
-    font-weight:700;
-    letter-spacing:-.02em;
+    font-family:"Inter",sans-serif; font-weight:600; font-size:12.5px;
+    letter-spacing:.16em; text-transform:uppercase; color:var(--accent);
     margin-bottom:14px;
   }
-  .obj{
-    font-size:15px;
-    color:var(--ink-2);
-    background:var(--bg);
-    border-left:3px solid var(--accent);
-    padding:15px 18px;
-    border-radius:0 8px 8px 0;
-    line-height:1.7;
-  }
-  .obj b{color:var(--ink);font-weight:600}
-  .obj-label{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:9px}
-  .obj-label b{color:var(--accent);font-weight:700}
-  .obj-list{list-style:none;counter-reset:obj;display:flex;flex-direction:column;gap:9px}
-  .obj-list li{position:relative;padding-left:30px;counter-increment:obj}
-  .obj-list li::before{
-    content:counter(obj);position:absolute;left:0;top:1px;
-    width:20px;height:20px;border-radius:50%;
-    background:var(--accent);color:#fff;
-    font-size:12px;font-weight:700;
-    display:flex;align-items:center;justify-content:center;
-  }
-  /* Section */
-  section{padding:30px 44px}
-  section + section{border-top:1px solid var(--line)}
-  .kr-head{display:flex;align-items:baseline;gap:10px;margin-bottom:6px}
+  h1{font-size:30px; font-weight:900; margin:0 0 4px; letter-spacing:-.02em;}
+  .obj{margin:26px 0 6px;}
+  .obj h2{font-size:13px; letter-spacing:.08em; text-transform:uppercase;
+    color:var(--mute); font-family:"Inter",sans-serif; font-weight:700; margin:0 0 12px;}
+  .obj ol{margin:0; padding-left:20px;}
+  .obj li{margin-bottom:8px; font-size:15.5px; color:var(--ink-soft);}
+  .obj li strong{color:var(--ink); font-weight:800;}
+
+  .kr{margin-top:40px;}
+  .kr-head{display:flex; align-items:baseline; gap:10px; margin-bottom:4px; flex-wrap:wrap;}
   .kr-tag{
-    font-size:12px;font-weight:700;color:#fff;background:var(--ink);
-    padding:2px 9px;border-radius:5px;letter-spacing:.02em;flex-shrink:0;
+    font-family:"Inter",sans-serif; font-weight:800; font-size:12px;
+    color:#fff; background:var(--ink); padding:3px 9px; border-radius:6px;
+    letter-spacing:.04em; flex:none;
   }
-  .kr-title{font-size:17px;font-weight:600;letter-spacing:-.01em}
-  .kr-sub{font-size:13.5px;color:var(--ink-3);margin:4px 0 18px}
-  /* Table */
-  table{width:100%;border-collapse:collapse;font-size:14px}
-  th{
-    text-align:left;font-weight:600;font-size:12.5px;color:var(--ink-3);
-    padding:9px 12px;border-bottom:1.5px solid var(--line-2);
-    letter-spacing:.01em;white-space:nowrap;
-  }
-  th.num,td.num{text-align:right;font-variant-numeric:tabular-nums}
-  td{padding:11px 12px;border-bottom:1px solid var(--line);color:var(--ink-2)}
-  td:first-child{font-weight:600;color:var(--ink)}
-  tr:last-child td{border-bottom:none}
-  tr.total td{
-    border-top:1.5px solid var(--line-2);border-bottom:none;
-    font-weight:700;color:var(--ink);background:var(--bg);
-  }
-  .pos{color:var(--accent);font-weight:600}
-  .neg{color:var(--danger);font-weight:600}
+  .kr-title{font-size:19px; font-weight:800; margin:0;}
+  .kr-sub{font-size:13px; color:var(--mute); margin:6px 0 18px;}
+
+  .pillrow{display:flex; gap:10px; flex-wrap:wrap; margin:0 0 20px;}
   .pill{
-    display:inline-block;font-size:11.5px;font-weight:600;
-    padding:2px 9px;border-radius:20px;letter-spacing:.01em;
+    flex:1 1 150px; background:var(--card); border:1px solid var(--line);
+    border-radius:var(--radius); padding:14px 16px;
   }
-  .pill.ok{background:var(--accent-soft);color:var(--accent)}
-  .pill.push{background:var(--blue-soft);color:var(--blue)}
-  .pill.stretch{background:var(--warn-soft);color:var(--warn)}
-  .pill.hold{background:var(--bg);color:var(--ink-2)}
-  .pill.stop{background:var(--danger-soft);color:var(--danger)}
-  .note{
-    font-size:12.5px;color:var(--ink-3);margin-top:16px;
-    padding-left:14px;border-left:2px solid var(--line-2);line-height:1.75;
+  .pill .lab{font-size:12px; color:var(--mute); margin-bottom:4px;}
+  .pill .val{font-size:22px; font-weight:900; letter-spacing:-.02em;}
+  .pill .note{font-size:11.5px; color:var(--faint); margin-top:2px;}
+  .pill.lead{border-color:var(--accent); background:var(--accent-soft);}
+
+  .tbl-wrap{overflow-x:auto; -webkit-overflow-scrolling:touch;
+    border:1px solid var(--line); border-radius:var(--radius); background:var(--card);}
+  table{border-collapse:collapse; width:100%; font-size:14px; min-width:520px;}
+  th,td{padding:12px 14px; text-align:left; border-bottom:1px solid var(--line-soft);}
+  th{font-family:"Inter",sans-serif; font-weight:700; font-size:12px; color:var(--mute);
+    letter-spacing:.04em; text-transform:uppercase; background:#fafafa;}
+  tbody tr:last-child td{border-bottom:none;}
+  td.num{font-variant-numeric:tabular-nums; white-space:nowrap;}
+  .tag{display:inline-block; font-size:11.5px; font-weight:700; padding:2px 8px; border-radius:5px;
+    font-family:"Inter",sans-serif;}
+  .tag.ok{background:var(--accent-soft); color:var(--accent);}
+  .tag.aggr{background:var(--warn-soft); color:var(--warn);}
+  .tag.str{background:#f1f1f4; color:var(--ink-soft);}
+  .tag.new{background:var(--new-soft); color:var(--new);}
+  tr.row-new td{background:var(--new-soft);}
+  tr.row-new td:first-child{box-shadow:inset 3px 0 0 var(--new);}
+  tr.sum td{font-weight:800; background:#f6f7f9;}
+
+  .notes{margin-top:18px;}
+  .notes p{font-size:14.5px; color:var(--ink-soft); margin:10px 0;}
+  .notes p strong{color:var(--ink); font-weight:800;}
+  .callout{
+    margin-top:14px; border-left:3px solid var(--new); background:var(--new-soft);
+    border-radius:0 10px 10px 0; padding:12px 16px; font-size:14px; color:#13503a;
   }
-  .note p{margin:0}
-  .note p + p{margin-top:8px}
-  .note b{color:var(--ink-2);font-weight:600}
-  /* Footer blocks */
-  .blocks{padding:0 44px 38px}
-  .block{
-    background:var(--bg);border-radius:10px;padding:16px 18px;margin-top:14px;
-  }
-  .block h3{
-    font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
-    color:var(--ink-2);margin-bottom:7px;
-  }
-  .block p{font-size:13.5px;color:var(--ink-2);line-height:1.7}
-  .rhythm{display:flex;flex-wrap:wrap;gap:7px;align-items:center}
-  /* Media strategy cards */
-  .strat-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:6px}
-  .strat{
-    border:1px solid var(--line);border-radius:10px;padding:16px 18px;
-    background:var(--paper);
-  }
-  .strat-top{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:3px}
-  .strat-name{font-size:15px;font-weight:700;letter-spacing:.01em}
-  .strat-role{font-size:12px;font-weight:600;color:var(--ink-3)}
-  .strat-stat{
-    font-size:12px;color:var(--ink-3);font-variant-numeric:tabular-nums;
-    padding-bottom:11px;margin-bottom:11px;border-bottom:1px solid var(--line);
-  }
-  .strat-stat b{color:var(--ink-2);font-weight:600}
-  .strat ul{list-style:none;display:flex;flex-direction:column;gap:7px}
-  .strat li{position:relative;padding-left:14px;font-size:13px;color:var(--ink-2);line-height:1.55}
-  .strat li::before{content:"";position:absolute;left:0;top:8px;width:5px;height:5px;border-radius:50%;background:var(--line-2)}
-  .strat.lead{border-color:var(--accent);border-width:1.5px}
-  .strat.lead li::before{background:var(--accent)}
-  .rhythm-block{margin-top:18px;padding-top:18px;border-top:1px solid var(--line)}
-  .rhythm-h{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-2);margin-bottom:11px}
-  /* Content sub-sections */
-  .sub-h{font-size:14px;font-weight:600;color:var(--ink);margin:20px 0 4px;display:flex;align-items:center;gap:8px}
-  .sub-h:first-of-type{margin-top:6px}
-  .sub-n{
-    width:19px;height:19px;border-radius:5px;flex-shrink:0;
-    background:var(--ink);color:#fff;font-size:11px;font-weight:700;
-    display:flex;align-items:center;justify-content:center;
-  }
-  .sub-desc{font-size:12.5px;color:var(--ink-3);margin:0 0 11px 27px;line-height:1.6}
-  .mini{font-size:12px;color:var(--ink-3);margin:6px 0 0 27px;line-height:1.6}
-  .mini b{color:var(--ink-2);font-weight:600}
-  /* Team benchmark reference */
-  .bench{
-    display:flex;flex-wrap:wrap;gap:10px;margin:0 0 16px;
-  }
-  .bench-item{
-    flex:1;min-width:150px;
-    background:var(--bg);border-radius:9px;padding:11px 14px;
-  }
-  .bench-item.now{background:var(--accent-soft)}
-  .bench-k{font-size:11.5px;font-weight:600;color:var(--ink-3);letter-spacing:.02em;margin-bottom:3px}
-  .bench-item.now .bench-k{color:var(--accent)}
-  .bench-v{font-size:19px;font-weight:700;color:var(--ink);font-variant-numeric:tabular-nums;letter-spacing:-.01em}
-  .bench-item.now .bench-v{color:var(--accent)}
-  .bench-sub{font-size:11.5px;color:var(--ink-3);margin-top:2px}
-  .step{font-size:13px;color:var(--ink);background:var(--paper);border:1px solid var(--line);padding:5px 11px;border-radius:7px}
-  .arr{color:var(--ink-3);font-size:12px}
-  @media(max-width:680px){
-    body{padding:20px 0}
-    .sheet{border-radius:0;border-left:none;border-right:none}
-    header,section{padding-left:22px;padding-right:22px}
-    .blocks{padding-left:22px;padding-right:22px}
-    table{font-size:13px}
-    th,td{padding:8px 7px}
-    .hide-sm{display:none}
-    .strat-grid{grid-template-columns:1fr}
-    .bench{flex-direction:column}
+  .callout strong{color:var(--new); font-weight:800;}
+  hr.div{border:none; border-top:1px solid var(--line); margin:46px 0 0;}
+  footer{margin-top:40px; font-size:12px; color:var(--faint); text-align:center;}
+  @media(max-width:560px){
+    h1{font-size:25px;} .pill .val{font-size:19px;}
+    body{padding:0 14px 70px;}
   }
 </style>
 </head>
 <body>
-<div class="sheet">
+<div class="wrap">
 
-  <header>
+  <header class="top">
     <div class="eyebrow">2026 · 6월 · 빌딩기</div>
     <h1>6월 마케팅 목표</h1>
-    <div class="obj">
-      <div class="obj-label"><b>Objective</b></div>
-      <ol class="obj-list">
-        <li>집중 SKU 효율 구조 리빌딩 → 6월 공헌이익 <b>6,300만원</b> 달성</li>
-        <li>7월 본격화를 위한 핵심 선행지표를 최소한으로 함께 세팅</li>
-      </ol>
-    </div>
   </header>
 
-  <section>
-    <div class="kr-head"><span class="kr-tag">KR1</span><span class="kr-title">공헌이익 6,300만</span></div>
-    <p class="kr-sub">결과지표 · 5월 대비 비교 · 1팀 5명(인당 기준 환산)</p>
-    <div class="bench">
-      <div class="bench-item">
-        <div class="bench-k">팀 최소선</div>
-        <div class="bench-v">4,250만</div>
-        <div class="bench-sub">인당 월 850만 × 5명</div>
+  <section class="obj">
+    <h2>Objective</h2>
+    <ol>
+      <li>집중 SKU 효율 구조 리빌딩 → 6월 공헌이익 <strong>약 7,000만원</strong> 달성</li>
+      <li>6/16 인계받은 <strong>골반마사지기 흑자 전환 마무리</strong></li>
+      <li>7월 본격화를 위한 핵심 선행지표를 최소한으로 함께 세팅</li>
+    </ol>
+  </section>
+
+  <!-- KR1 -->
+  <section class="kr">
+    <div class="kr-head">
+      <span class="kr-tag">KR1</span>
+      <h3 class="kr-title">공헌이익 약 7,000만 · 골반 흑자 전환</h3>
+    </div>
+    <p class="kr-sub">결과지표 · 5월 대비 비교 · 1팀 5명(인당 기준 환산) · 골반은 6/16 인계분</p>
+
+    <div class="pillrow">
+      <div class="pill">
+        <div class="lab">팀 최소선</div>
+        <div class="val">4,250만</div>
+        <div class="note">인당 월 850만 × 5명</div>
       </div>
-      <div class="bench-item now">
-        <div class="bench-k">6월 빌딩 목표</div>
-        <div class="bench-v">6,300만</div>
-        <div class="bench-sub">최소선 ↑ / 목표선 74%</div>
+      <div class="pill lead">
+        <div class="lab">6월 빌딩 목표</div>
+        <div class="val">약 7,000만</div>
+        <div class="note">최소선 ↑ / 목표선 82%</div>
       </div>
-      <div class="bench-item">
-        <div class="bench-k">팀 목표선</div>
-        <div class="bench-v">8,500만</div>
-        <div class="bench-sub">인당 월 1,700만 × 5명</div>
+      <div class="pill">
+        <div class="lab">팀 목표선</div>
+        <div class="val">8,500만</div>
+        <div class="note">인당 월 1,700만 × 5명</div>
       </div>
     </div>
-    <table>
-      <thead>
-        <tr>
-          <th>SKU</th>
-          <th>월 매출 목표</th>
-          <th class="num">5월 공헌이익</th>
-          <th class="num">6월 목표</th>
-          <th>구분</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>목베개</td>
-          <td>4.0억 <span class="pos">+35%</span></td>
-          <td class="num">2,401만 <span style="color:var(--ink-3)">(8.1%)</span></td>
-          <td class="num">4,800만 <span style="color:var(--ink-3)">(12%)</span></td>
-          <td><span class="pill ok">합리적</span></td>
-        </tr>
-        <tr>
-          <td>허편케V2</td>
-          <td>1.5억 <span class="pos">+87%</span></td>
-          <td class="num">508만 <span style="color:var(--ink-3)">(6.3%)</span></td>
-          <td class="num">1,500만 <span style="color:var(--ink-3)">(10%)</span></td>
-          <td><span class="pill push">공격적</span></td>
-        </tr>
-        <tr>
-          <td>팔꿈치</td>
-          <td>9,000만 <span style="color:var(--ink-3)">(유지)</span></td>
-          <td class="num"><span class="neg">-76만</span> <span style="color:var(--ink-3)">(5/26 런칭)</span></td>
-          <td class="num">900만 <span style="color:var(--ink-3)">(10%)</span></td>
-          <td><span class="pill stretch">스트레치</span></td>
-        </tr>
-        <tr class="total">
-          <td>합계</td>
-          <td>—</td>
-          <td class="num">약 2,833만</td>
-          <td class="num">6,300만</td>
-          <td><span class="pos">+122%</span></td>
-        </tr>
-      </tbody>
-    </table>
-    <div class="note">
-      <p><b>팀 기준(분기 인당 목표 5,000만 / 최소 2,500만).</b> 6월 6,300만은 최소선(4,250만)을 넘고 목표선(8,500만)의 약 74% — 빌딩기에 최소선을 확실히 넘기며 목표선을 향해 쌓아가는 위치.</p>
-      <p><b>목베개</b>는 V1·V2 혼합 형태로 목표 운영한다(매출 쉐어 기조 유지). 전체를 합리적으로 끌어올리며 공헌이익을 확보.</p>
-      <p><b>허편케V2</b>는 가장 공격적으로 운영한다. 6~9월 매출·공헌이익 확보 드라이브의 핵심.</p>
-      <p><b>팔꿈치</b>는 6월에 다양한 테스트·KW 발굴을 병행하며 보수적으로 접근한다. 스트레치인 만큼 우선은 기본 설정 목표를 유지.</p>
+
+    <div class="tbl-wrap">
+      <table>
+        <thead>
+          <tr><th>SKU</th><th>월 매출 목표</th><th>5월 공헌이익</th><th>6월 목표</th><th>구분</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>목베개</td><td class="num">4.0억 +35%</td><td class="num">2,401만 (8.1%)</td>
+            <td class="num">4,800만 (12%)</td><td><span class="tag ok">합리적</span></td>
+          </tr>
+          <tr>
+            <td>허편케V2</td><td class="num">1.5억 +87%</td><td class="num">508만 (6.3%)</td>
+            <td class="num">1,500만 (10%)</td><td><span class="tag aggr">공격적</span></td>
+          </tr>
+          <tr class="row-new">
+            <td>골반</td><td class="num">잔여 약 4,500만<br><span style="font-size:11px;color:var(--mute)">(6/16 인계 · 일 300만)</span></td>
+            <td class="num">— (인계)</td>
+            <td class="num">흑자 전환 · CI 15%<br><span style="font-size:11px;color:var(--mute)">잔여분 약 630~675만</span></td>
+            <td><span class="tag new">인계·흑자전환</span></td>
+          </tr>
+          <tr>
+            <td>팔꿈치</td><td class="num">9,000만 (유지)</td><td class="num">-76만 (5/26 런칭)</td>
+            <td class="num">900만 (10%)</td><td><span class="tag str">스트레치</span></td>
+          </tr>
+          <tr class="sum">
+            <td>합계</td><td class="num">—</td><td class="num">약 2,833만</td>
+            <td class="num">약 7,000만</td><td>+147%</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="notes">
+      <p><strong>팀 기준(분기 인당 목표 5,000만 / 최소 2,500만).</strong> 골반 인계분을 더한 6월 약 7,000만은 최소선(4,250만)을 확실히 넘고 목표선(8,500만)의 약 82% — 빌딩기에 최소선을 넘기며 목표선을 향해 쌓아가는 위치.</p>
+      <div class="callout">
+        <strong>골반마사지기 (6/16 인계).</strong> 6월 잔여 약 14~15일만 운영하므로 풀먼스 매출보다 <strong>흑자 전환</strong>이 본질 목표. 일 매출 300만 · 공헌이익 15%(일 45만) 기조로, 6월 잔여 공헌이익 약 630~675만을 확보하며 7월 본격 운영의 흑자 기반을 만든다.
+      </div>
+      <p><strong>목베개</strong>는 V1·V2 혼합 형태로 목표 운영한다(매출 쉐어 기조 유지). 전체를 합리적으로 끌어올리며 공헌이익을 확보.</p>
+      <p><strong>허편케V2</strong>는 가장 공격적으로 운영한다. 6~9월 매출·공헌이익 확보 드라이브의 핵심.</p>
+      <p><strong>팔꿈치</strong>는 6월에 다양한 테스트·KW 발굴을 병행하며 보수적으로 접근한다. 스트레치인 만큼 우선은 기본 설정 목표를 유지.</p>
     </div>
   </section>
 
-  <section>
-    <div class="kr-head"><span class="kr-tag">KR2</span><span class="kr-title">매체 효율 — GFA 볼륨 확장으로 매출 견인, SA 사수</span></div>
+  <!-- KR2 -->
+  <section class="kr">
+    <div class="kr-head">
+      <span class="kr-tag">KR2</span>
+      <h3 class="kr-title">매체 효율 — GFA 볼륨 확장으로 매출 견인, SA 사수</h3>
+    </div>
     <p class="kr-sub">핵심 선행 · ROAS 150% 가드레일로 주 단위 예산 재배분 · 측정은 아임웹 기준(GFA만 매체 기준) · 전 매체 PA 소재 활용해 반려 최소화로 진입</p>
-    <table>
-      <thead>
-        <tr>
-          <th>매체</th>
-          <th class="num">6월 광고비</th>
-          <th class="num hide-sm">5월 대비</th>
-          <th class="num">ROAS 목표</th>
-          <th class="num hide-sm">5월 실적</th>
-          <th>방향</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>GFA</td>
-          <td class="num">5,000만</td>
-          <td class="num hide-sm pos">+138%</td>
-          <td class="num">160%↑</td>
-          <td class="num hide-sm">179% / 2,104만</td>
-          <td><span class="pill ok">매출 견인</span></td>
-        </tr>
-        <tr>
-          <td>메타</td>
-          <td class="num">2.4억</td>
-          <td class="num hide-sm pos">+18%</td>
-          <td class="num">120%↑</td>
-          <td class="num hide-sm">109% / 2.03억</td>
-          <td><span class="pill push">증액</span></td>
-        </tr>
-        <tr>
-          <td>구글</td>
-          <td class="num">2,400만</td>
-          <td class="num hide-sm pos">+28%</td>
-          <td class="num">120%↑</td>
-          <td class="num hide-sm">94% / 1,871만</td>
-          <td><span class="pill push">검증 증액</span></td>
-        </tr>
-        <tr>
-          <td>SA</td>
-          <td class="num">3,200만</td>
-          <td class="num hide-sm">유지</td>
-          <td class="num">500%↑</td>
-          <td class="num hide-sm">816% / 3,188만</td>
-          <td><span class="pill hold">효율 사수</span></td>
-        </tr>
-        <tr>
-          <td>카카오</td>
-          <td class="num">소액</td>
-          <td class="num hide-sm">숏폼 진입</td>
-          <td class="num">테스트</td>
-          <td class="num hide-sm">97% (누적)</td>
-          <td><span class="pill stretch">숏폼 테스트</span></td>
-        </tr>
-        <tr class="total">
-          <td>합계</td>
-          <td class="num">약 3.46억</td>
-          <td class="num hide-sm">—</td>
-          <td class="num">—</td>
-          <td class="num hide-sm">—</td>
-          <td>—</td>
-        </tr>
-      </tbody>
-    </table>
-    <div class="note">
-      <p><b>전 매체 진입 원칙.</b> 검증된 PA 소재를 베이스로 활용해 심사 반려를 최소화하며 진입한다 — 빌딩기 소재 심사 지연 리스크 축소가 목적.</p>
-      <p><b>광고비는 상한이 아닌 출발점.</b> ROAS가 유지되면 주 단위로 증액(GFA 1순위)하고, 깨지면 축소한다.</p>
-    </div>
-  </section>
 
-  <section>
-    <div class="kr-head"><span class="kr-tag">전략</span><span class="kr-title">6월 매체 운영 전략</span></div>
-    <p class="kr-sub">매체별 역할 · 표의 목표·실적과 운영 액션을 함께 묶음</p>
-    <div class="strat-grid">
-
-      <div class="strat lead">
-        <div class="strat-top"><span class="strat-name">GFA</span><span class="strat-role">매출 견인 · 볼륨 확장</span></div>
-        <div class="strat-stat">5월 <b>179%</b> · ROAS 목표 <b>160%</b> · 6월 <b>5,000만</b> (+138%)</div>
-        <ul>
-          <li>효율 기반 운영 기조 유지</li>
-          <li>주 2회 이상 이미지·PA 테스트로 볼륨 확장</li>
-          <li>PA로 노출·클릭 확보 → 리타겟으로 전환 유지 구조 확립</li>
-        </ul>
-      </div>
-
-      <div class="strat">
-        <div class="strat-top"><span class="strat-name">META</span><span class="strat-role">증액 · 신규 고효율 발굴</span></div>
-        <div class="strat-stat">5월 <b>109%</b> · ROAS 목표 <b>120%</b> · 6월 <b>2.4억</b> (+18%)</div>
-        <ul>
-          <li>기존 고효율 캠페인은 시간이 지나며 효율 자연 감소 → 신규 고효율 캠페인 2개 이상 확보</li>
-          <li>공격적 콘텐츠 발행으로 노출·오디언스 확장</li>
-        </ul>
-      </div>
-
-      <div class="strat">
-        <div class="strat-top"><span class="strat-name">GOOGLE</span><span class="strat-role">검증 증액</span></div>
-        <div class="strat-stat">5월 <b>94%</b> · ROAS 목표 <b>120%</b> · 6월 <b>2,400만</b> (+28%)</div>
-        <ul>
-          <li>리타겟 운영: 슬룸 방문 30일 / 제품별 방문 90일, 일 예산 30만 원 선</li>
-          <li>기존 고효율 소재 + 고효율 소구점(신규 PA) 캠페인 투트랙 운영</li>
-        </ul>
-      </div>
-
-      <div class="strat">
-        <div class="strat-top"><span class="strat-name">SA</span><span class="strat-role">효율 사수 · 공격적 확장</span></div>
-        <div class="strat-stat">5월 <b>816%</b> · ROAS 목표 <b>500%</b> · 6월 <b>3,200만</b> (유지)</div>
-        <ul>
-          <li>파워링크·쇼핑검색 영역 강화 및 공격적 확장</li>
-        </ul>
-      </div>
-
-      <div class="strat">
-        <div class="strat-top"><span class="strat-name">KAKAO</span><span class="strat-role">숏폼 테스트</span></div>
-        <div class="strat-stat">5월 <b>97%</b> (누적) · 6월 <b>소액 운영</b></div>
-        <ul>
-          <li>숏폼·비즈보드 지면 소액 확장 테스트</li>
-          <li>프로모션 기간 비즈보드 확장 준비</li>
-        </ul>
-      </div>
-
+    <div class="tbl-wrap">
+      <table>
+        <thead>
+          <tr><th>매체</th><th>6월 광고비</th><th>5월 대비</th><th>ROAS 목표</th><th>5월 실적</th><th>방향</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>GFA</td><td class="num">5,000만</td><td class="num">+138%</td><td class="num">160%↑</td><td class="num">179% / 2,104만</td><td>매출 견인</td></tr>
+          <tr><td>메타</td><td class="num">2.4억</td><td class="num">+18%</td><td class="num">120%↑</td><td class="num">109% / 2.03억</td><td>증액</td></tr>
+          <tr><td>구글</td><td class="num">2,400만</td><td class="num">+28%</td><td class="num">120%↑</td><td class="num">94% / 1,871만</td><td>검증 증액</td></tr>
+          <tr><td>SA</td><td class="num">3,200만</td><td class="num">유지</td><td class="num">500%↑</td><td class="num">816% / 3,188만</td><td>효율 사수</td></tr>
+          <tr><td>카카오</td><td class="num">소액</td><td class="num">숏폼 진입</td><td class="num">테스트</td><td class="num">97% (누적)</td><td>숏폼 테스트</td></tr>
+          <tr class="sum"><td>합계</td><td class="num">약 3.46억</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td>—</td></tr>
+        </tbody>
+      </table>
     </div>
 
-    <div class="rhythm-block">
-      <div class="rhythm-h">운영 리듬</div>
-      <div class="rhythm">
-        <span class="step">주초 매체별 ROAS 점검</span><span class="arr">→</span>
-        <span class="step">150% 기준 예산 재배분</span><span class="arr">→</span>
-        <span class="step">증액 매체 계단식↑</span><span class="arr">→</span>
-        <span class="step">데일리 소재 디벨롭 (주 2~3회 루틴)</span><span class="arr">→</span>
-        <span class="step">저효율 소재·타겟 OFF</span><span class="arr">→</span>
-        <span class="step">주말 신규 소재 준비</span>
+    <div class="notes">
+      <p><strong>전 매체 진입 원칙.</strong> 검증된 PA 소재를 베이스로 활용해 심사 반려를 최소화하며 진입한다 — 빌딩기 소재 심사 지연 리스크 축소가 목적.</p>
+      <p><strong>광고비는 상한이 아닌 출발점.</strong> ROAS가 유지되면 주 단위로 증액(GFA 1순위)하고, 깨지면 축소한다.</p>
+      <div class="callout">
+        <strong>골반 매체비는 인계 검증분으로 별도 운영.</strong> 6월 잔여 기간은 ROAS·CI 검증에 초점 — 기존 매체 합계와 분리해 소액으로 시작하고, 흑자 구조 확인 후 7월에 정식 편성.
       </div>
     </div>
   </section>
 
-  <section>
-    <div class="kr-head"><span class="kr-tag">KR3</span><span class="kr-title">콘텐츠 운영</span></div>
+  <!-- KR3 -->
+  <section class="kr">
+    <div class="kr-head">
+      <span class="kr-tag">KR3</span>
+      <h3 class="kr-title">콘텐츠 운영</h3>
+    </div>
     <p class="kr-sub">최소 선행 · 수량 기준 운영 (콘텐츠팀 인풋 + 1팀 제작 아웃풋)</p>
 
-    <div class="sub-h"><span class="sub-n">1</span>콘텐츠팀 인풋</div>
-    <table>
-      <thead>
-        <tr>
-          <th>항목</th>
-          <th class="num">목베개</th>
-          <th class="num">허편케V2</th>
-          <th class="num">팔꿈치</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>신규 콘텐츠 촬영·제작</td>
-          <td class="num">6개</td>
-          <td class="num">8개</td>
-          <td class="num">6개</td>
-        </tr>
-        <tr>
-          <td>PA 결합·기반 RVI</td>
-          <td class="num" colspan="3" style="text-align:left">20개 <span style="color:var(--ink-3)">— 소구점·활용 PA 소재 전달만 하는 형식</span></td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="notes">
+      <p><strong>1 · 콘텐츠팀 인풋</strong></p>
+    </div>
+    <div class="tbl-wrap">
+      <table>
+        <thead>
+          <tr><th>항목</th><th>목베개</th><th>허편케V2</th><th>팔꿈치</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>신규 콘텐츠 촬영·제작</td><td class="num">6개</td><td class="num">8개</td><td class="num">6개</td></tr>
+          <tr><td>PA 결합·기반 RVI</td><td class="num" colspan="3">20개 — 소구점·활용 PA 소재 전달만 하는 형식</td></tr>
+        </tbody>
+      </table>
+    </div>
 
-    <div class="sub-h"><span class="sub-n">2</span>1팀 콘텐츠 제작 아웃풋</div>
-    <p class="sub-desc">콘텐츠 타율을 높이기 위한 다양한 내부 테스트·가설 검증에 초점. 신규 소구점 발굴 진입 테스트 + 단컷·이미지 활성화 중심 운영(최소 마지노선, 리밋 없이 테스트). PA 결합 RVI 포맷 개발 + 효율 최적화 테스트 병행.</p>
-    <table>
-      <thead>
-        <tr>
-          <th>SKU</th>
-          <th class="num">VI</th>
-          <th class="num">RVI</th>
-          <th class="num">IM + 단컷</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>목베개</td>
-          <td class="num">6개</td>
-          <td class="num">22개</td>
-          <td class="num">50개~</td>
-        </tr>
-        <tr>
-          <td>허편케V2</td>
-          <td class="num">3개</td>
-          <td class="num">14개</td>
-          <td class="num">25개~</td>
-        </tr>
-        <tr>
-          <td>팔꿈치</td>
-          <td class="num">2개</td>
-          <td class="num">12개</td>
-          <td class="num">60개~</td>
-        </tr>
-      </tbody>
-    </table>
-    <p class="mini"><b>IM+단컷</b>은 최소 마지노선으로 두고 리밋 없이 테스트 예정.</p>
+    <div class="notes">
+      <p style="margin-top:22px;"><strong>2 · 1팀 콘텐츠 제작 아웃풋</strong></p>
+      <p>콘텐츠 타율을 높이기 위한 다양한 내부 테스트·가설 검증에 초점. 신규 소구점 발굴 진입 테스트 + 단컷·이미지 활성화 중심 운영(최소 마지노선, 리밋 없이 테스트). PA 결합 RVI 포맷 개발 + 효율 최적화 테스트 병행.</p>
+    </div>
+    <div class="tbl-wrap">
+      <table>
+        <thead>
+          <tr><th>SKU</th><th>VI</th><th>RVI</th><th>IM + 단컷</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>목베개</td><td class="num">6개</td><td class="num">22개</td><td class="num">50개~</td></tr>
+          <tr><td>허편케V2</td><td class="num">3개</td><td class="num">14개</td><td class="num">25개~</td></tr>
+          <tr><td>팔꿈치</td><td class="num">2개</td><td class="num">12개</td><td class="num">60개~</td></tr>
+          <tr class="row-new"><td>골반</td><td class="num">인계 검증분</td><td class="num">기존 PA 활용</td><td class="num">소량 테스트</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="notes">
+      <p style="font-size:13px;color:var(--mute);">골반은 6/16 인계분으로, 6월은 기존 소재 검증·흑자 확인 중심. 신규 콘텐츠 본격 편성은 7월부터.</p>
 
-    <div class="sub-h"><span class="sub-n">3</span>PA / PPL 실행 · 고효율 소재 발굴</div>
-    <p class="sub-desc">PA/PPL을 실행하고, 광고비 200만 이상 태워 ROAS 160% 넘는 소재를 SKU별 1건씩 발굴한다 — 발굴 소재가 곧 매체 운영의 베이스가 됨(테스트 매체비는 KR2 예산 내).</p>
-    <table>
-      <thead>
-        <tr>
-          <th>SKU</th>
-          <th class="num">PA/PPL 실행</th>
-          <th>고효율 소재 발굴 목표</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>목베개</td>
-          <td class="num">10인</td>
-          <td>광고비 200만↑ · ROAS 160%↑ 소재 <b>3건↑</b></td>
-        </tr>
-        <tr>
-          <td>허편케V2</td>
-          <td class="num">5인</td>
-          <td>광고비 200만↑ · ROAS 160%↑ 소재 <b>1건</b></td>
-        </tr>
-        <tr>
-          <td>팔꿈치</td>
-          <td class="num">5인</td>
-          <td>광고비 200만↑ · ROAS 160%↑ 소재 <b>1건</b></td>
-        </tr>
-      </tbody>
-    </table>
-    <p class="mini">발굴 목표는 활동량이 아닌 결과 기여 지표 — 매체에 태워 검증된 소재만 인정.</p>
+      <p style="margin-top:22px;"><strong>3 · PA / PPL 실행 · 고효율 소재 발굴</strong></p>
+      <p>PA/PPL을 실행하고, 광고비 200만 이상 태워 ROAS 160% 넘는 소재를 SKU별 1건씩 발굴한다 — 발굴 소재가 곧 매체 운영의 베이스가 됨(테스트 매체비는 KR2 예산 내).</p>
+    </div>
+    <div class="tbl-wrap">
+      <table>
+        <thead>
+          <tr><th>SKU</th><th>PA/PPL 실행</th><th>고효율 소재 발굴 목표</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>목베개</td><td class="num">10인</td><td>광고비 200만↑ · ROAS 160%↑ 소재 <strong>3건↑</strong></td></tr>
+          <tr><td>허편케V2</td><td class="num">5인</td><td>광고비 200만↑ · ROAS 160%↑ 소재 <strong>1건</strong></td></tr>
+          <tr><td>팔꿈치</td><td class="num">5인</td><td>광고비 200만↑ · ROAS 160%↑ 소재 <strong>1건</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="notes">
+      <p style="font-size:13px;color:var(--mute);">발굴 목표는 활동량이 아닌 결과 기여 지표 — 매체에 태워 검증된 소재만 인정.</p>
+    </div>
   </section>
+
+  <hr class="div">
+  <footer>6월 마케팅 1팀 OKR · 빌딩기 · 골반 6/16 인계 반영</footer>
 
 </div>
 </body>
